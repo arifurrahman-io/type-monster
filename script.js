@@ -17,6 +17,7 @@ fetch("./texts.json")
   .then((data) => {
     questionText = data[Math.floor(Math.random() * data.length)];
     question.innerHTML = questionText;
+    question.style.padding = "20px";
   });
 
 // checks the user typed character and displays accordingly
@@ -73,6 +74,10 @@ const gameOver = () => {
   resultModal.innerHTML = "";
   resultModal.classList.toggle("hidden");
   modalBackground.classList.toggle("hidden");
+  resultModal.style.position = "absolute";
+  resultModal.style.left = "50%";
+  resultModal.style.top = "50%";
+
   // clear user text
   display.innerHTML = "";
   // make it inactive
@@ -103,7 +108,7 @@ const start = () => {
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 3;
+  let count = 1;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
