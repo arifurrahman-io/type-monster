@@ -6,11 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speed Typer</title>
+    <style>
+        .blog-section {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        p,
+        li {
+            font-size: 18px;
+        }
+
+        .blog {
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body>
 
+    <main class="blog-section">
+        <section>
+            <div class="blog">
+                <h2>Difference between Local Storage and Session Storage</h2>
+                <p><b>Local Storage:</b> This read-only interface property provides access to the Document’s local
+                    storage
+                    object, the stored data is stored across browser sessions. Similar to sessionStorage, except that
+                    localStorage data gets cleared when the page session ends – that is when the page is closed. It is
+                    cleared when the last “private” tab of a browser is closed. DOMStrings are storage formats that use
+                    UTF-16 to
+                    encode data, which uses two bytes per character. Strings are automatically generated from integer
+                    keys just as they are for objects. The data stored in LocalStorage is specific to a protocol in the
+                    document. If the site is loaded over HTTP, localStorage returns a
+                    different object than if it is loaded over HTTPS.</p>
+                <p>
+                    <b>Session Storage:</b> Session Storage objects can be accessed using the sessionStorage read-only
+                    property. The difference
+                    between sessionStorage and localStorage is that localStorage data does not expire, whereas
+                    sessionStorage data is cleared when the page session ends.
 
+                    A unique page session gets created once a document is loaded in a browser tab. Page sessions are
+                    valid for only one tab at a time. Pages are only saved for the amount of time that the tab or the
+                    browser is open; they do not persist after the page reloads and restores. A new session is created
+                    each time a tab or window is opened; this is different from session cookies. Each tab/window that is
+                    opened with the same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage
+                    from the original tab is copied to the duplicated tab. Closing a window/tab ends the session and
+                    clears sessionStorage objects.
+                </p>
+            </div>
+
+            <div class="blog">
+                <h2>Difference between Global Scope and Session Scope</h2>
+                <p> <b>Global Scope:</b> The Javascript global scope is the context where everything in a Javascript
+                    program executes by
+                    default. This scope includes all variables, objects, and references that are not contained
+                    within a customized scope defined by a programmer. Global scope is the entire Javascript
+                    execution environment.</p>
+                <p> <b>Session Scope:</b> Session Scopes are can also be accessed from anywhere in the application, but
+                    they are different
+                    for different users, since they depend on the session. They die when a particular user session ends.
+                </p>
+            </div>
+
+            <div class="blog">
+                <h2>Event Loop of JavaScript</h2>
+                <p>The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations
+                    on a single thread, but using a few smart data structures, it gives us the illusion of
+                    multi-threading. Let’s take a look at what happens on the back-end.
+                    The call stack is responsible for keeping track of all the operations in line to be executed.
+                    Whenever a function is finished, it is popped from the stack. The event queue is responsible for
+                    sending new functions to the stack for processing. It follows the queue data structure to maintain
+                    the correct sequence in which all operations should be sent for execution.</p>
+            </div>
+
+            <div class="blog">
+                <h2>Ways to get undefined in JavaScript</h2>
+                <p> Ways to get undefined in JavaScript:</p>
+                <ul>
+                    <li>Variable that is not initialized will give undefined.</li>
+                    <li>Function with no returns.</li>
+                    <li>Parameter that is not passed will be undefined.</li>
+                    <li>If return has nothing on the right side will return undefined.</li>
+                    <li>Property that doesn't exixts on an object will give undefined.</li>
+                    <li>Accessing array elements outside of the index range.</li>
+                    <li>Deleting an element inside an array.</li>
+                    <li>Set a value directly to undefined.</li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
 
 </body>
 
